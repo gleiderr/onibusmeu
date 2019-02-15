@@ -78,11 +78,11 @@ class HomePage extends React.Component {
       <div className='h-100'>
         <header>
           <nav className='navbar navbar-dark bg-primary'>
-            <div className='navbar-brand m-0 col-5'>
+            <div className='navbar-brand'>
                 <span role='img' aria-label='Ô'>🚍</span>
                 nibus Meu
             </div>
-            <form className='form-inline m-0 col-7'>
+            <form className='form-inline col-6 col-sm-auto p-0'>
               <input className='form-control' 
                      type='search' 
                      placeholder='Sua linha 🔎'
