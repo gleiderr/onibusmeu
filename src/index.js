@@ -83,7 +83,7 @@ class HomePage extends React.Component {
                 nibus Meu
             </div>
             <form className='form-inline col-6 col-sm-auto p-0'>
-              <input className='form-control' 
+              <input className='form-control data-hj-whitelist' 
                      type='search' 
                      placeholder='Sua linha 🔎'
                      onChange={this.handleChange}
