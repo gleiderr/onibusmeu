@@ -239,7 +239,7 @@ const linhas = [
         ],
       },
     ]
-  },{
+  },/*{
     nome: '5805 - Célvia',
     partidaPadrão: 'Terminal Morro Alto',
     horários: [
@@ -747,7 +747,7 @@ const linhas = [
         ],
       },
     ]
-  },
+  },*/
 ];
 
 ReactDOM.render(<HomePage linhas={linhas}/>, document.getElementById('root'));
