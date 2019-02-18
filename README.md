@@ -1,3 +1,14 @@
+# Ônibus Meus
+Projeto com intuito de facilitar o acesso à informação de horários de ônibus metropolitanos.
+
+## Tecnologias Envolvidas
+- Javascript;
+- React;
+
+### Pretende-se utilizar
+- Web Crawler;
+- AWS (Amazon Web Service);
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
