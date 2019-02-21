@@ -93,13 +93,13 @@ class HomePage extends React.Component {
                 <span role='img' aria-label='Ô'>🚍</span>
                 nibus Meu
             </div>
-            <form className='form-inline col-6 col-sm-auto p-0'>
+            <div className='col-6 col-sm-auto p-0'>
               <input className='form-control data-hj-whitelist' 
                      type='search' 
-                     placeholder='Sua linha 🔎'
+                     placeholder='Sua Linha 🔎'
                      onChange={this.handleChange}
                      />
-            </form>
+            </div>
           </nav>
         </header>
         <main className='container my-2'>
