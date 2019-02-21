@@ -21,7 +21,7 @@ function Horario(props) {
    );
 }
 
-function Linha(props) {
+function DescricaoLinha(props) {
   const quadros = props.quadros.map((horário) => {
     return (<Horario key={horário.título} 
                      título={horário.título}
@@ -29,16 +29,46 @@ function Linha(props) {
   });
 
   return (
-    <div className='card card-body my-2'>
-      <h5 className='card-title mb-0'>{props.número} - {props.nome}</h5>
-      <div className='card-text'>
-        <div><strong>Tarifa:</strong> {props.tarifa}</div>
-        <div><strong>Município:</strong> {props.município}</div>
-        <div><strong>Empresa:</strong> {props.empresa}</div>
-        {quadros}
-      </div>
+    <div className='card-text'>
+      <div><strong>Tarifa:</strong> {props.tarifa}</div>
+      <div><strong>Município:</strong> {props.município}</div>
+      <div><strong>Empresa:</strong> {props.empresa}</div>
+      {quadros}
     </div>
-   );
+  );
+}
+
+class Linha extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = { expanded: false };
+  }
+
+  handleClick() {
+    this.setState({expanded: !this.state.expanded });
+  }
+    
+  render() {
+    let descricaoLinha;
+    if (this.state.expanded) {
+      descricaoLinha = (<DescricaoLinha tarifa={this.props.tarifa} 
+                          município={this.props.município} 
+                          empresa={this.props.empresa}
+                          quadros={this.props.quadros} />);
+    }
+
+    let pre_char = this.state.expanded ? '🔼' : '🔽';
+
+    return (
+      <div className='card card-body my-2'>
+        <h6 className='card-title mb-0' onClick={this.handleClick}>{pre_char} {this.props.número} - {this.props.nome}</h6>
+        {descricaoLinha}
+      </div>
+     );
+  }
+
 }
 
 function Linhas(props) {
