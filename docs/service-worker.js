@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/onibusmeu/precache-manifest.c88e75f2999914cbcde33d3093aeb9ee.js"
+  "/onibusmeu/precache-manifest.1af076ea03d15905660efb426e8b3089.js"
 );
 
 workbox.clientsClaim();
