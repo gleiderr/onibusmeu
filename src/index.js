@@ -64,14 +64,24 @@ class HomePage extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({
-      linhas: this.props.linhas.filter(linha => {
-        let nome = linha.nome.toLowerCase();
-        let value = e.target.value.toLowerCase();
-        
-        return nome.includes(value);
-      }),
-    });
+    let value = e.target.value.toLowerCase();
+
+    clearTimeout(this.timeoutID);
+
+    this.timeoutID = setTimeout(() => {
+      let linhas;
+      if (value) {
+        linhas = this.props.linhas.filter(linha => {
+          let nome = linha.número + ' ' + linha.nome.toLowerCase();
+          
+          return nome.includes(value);
+        });
+      } else {
+        linhas = this.props.linhas;
+      }
+
+      this.setState({linhas});
+    }, 300);
   }
 
   render() {
